@@ -1,4 +1,4 @@
-#!/usr/bin/python3.9
+#!/usr/bin/python3
 import re
 import os
 from colorama import Fore
@@ -20,6 +20,7 @@ import mathmatics_functions.multiply as MULTIPLY
 import mathmatics_functions.minus as MINUS
 import mathmatics_functions.divide as DIVIDE
 
+import display.hist as HIST
 def DEFAULT():
     print(
         Fore.LIGHTGREEN_EX+
@@ -36,6 +37,7 @@ def DEFAULT():
             f"-----------------------------\n"+
             f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Functions    -->  1\n"+
             f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} MathMatics   -->  2\n"+
+            f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Display      -->  3\n"+
             f"\n"+
             f"-----------------------------"+
             f"\n"
@@ -156,5 +158,11 @@ def DEFAULT():
                 else:
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
+        elif USER == "3":
+            print(f"{Fore.WHITE}[ OK ] histogram Selected")
+            HIST.Easy_Option()
+
         else:
             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
+
+DEFAULT()
