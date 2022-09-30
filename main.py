@@ -19,8 +19,12 @@ import mathmatics_functions.statics as STATICS
 import mathmatics_functions.multiply as MULTIPLY
 import mathmatics_functions.minus as MINUS
 import mathmatics_functions.divide as DIVIDE
+import mathmatics_functions.sum as SUM
 
+import display.scatter as SCATTER
+import display.plot as PLOT
 import display.hist as HIST
+import display.bar as BAR
 def DEFAULT():
     print(
         Fore.LIGHTGREEN_EX+
@@ -159,9 +163,33 @@ def DEFAULT():
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
         elif USER == "3":
-            print(f"{Fore.WHITE}[ OK ] histogram Selected")
-            HIST.Easy_Option()
+            print(
+                f"-----------------------------\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Histogram    -->  1\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} bar          -->  2\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Plot         -->  3\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Scatter      -->  4\n"+
+                "\n"+
+                f"-----------------------------"+
+                "\n"
+            )
 
+            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+
+            if USER == "1":
+                print(f"{Fore.WHITE}[ OK ] Histogram Selected")
+                HIST.Easy_Option()
+            elif USER == "2":
+                print(f"{Fore.WHITE}[ OK ] bar Selected")
+                BAR.Easy_Option()
+            elif USER == "3":
+                print(f"{Fore.WHITE}[ OK ] Plot Selected")
+                PLOT.Easy_Option()
+            elif USER == "4":
+                print(f"{Fore.WHITE}[ OK ] Scatter Selected")
+                SCATTER.Easy_Option()
+            else:
+                print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
         else:
             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
