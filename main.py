@@ -1,4 +1,4 @@
-#!/usr/bin/python3.9
+#!/usr/bin/python3
 import re
 import os
 from colorama import Fore
@@ -158,3 +158,4 @@ def DEFAULT():
 
         else:
             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
+DEFAULT()
