@@ -10,9 +10,10 @@ import sys
 import getpass
 import time
 
-def MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y):
+def MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title):
     all_data = pd.read_csv(FILE)
     plt.bar(all_data[f'{COLUMN_X}'], all_data[f'{COLUMN_Y}'])
+    plt.title(Title)
     plt.xlabel(label_X)
     plt.ylabel(label_Y)
     plt.show()
@@ -72,8 +73,14 @@ def USER_INPUT():
         label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
 
-    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
+        Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+        break
+
+
+    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title
 
 def Easy_Option():
-    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y = USER_INPUT()
-    MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y)
+    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title = USER_INPUT()
+    MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title)

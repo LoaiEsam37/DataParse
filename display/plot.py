@@ -10,9 +10,10 @@ import sys
 import getpass
 import time
 
-def MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y):
+def MyFunc(FILE, COLUMN_X, label_X, label_Y, Title):
     all_data = pd.read_csv(FILE)
-    plt.plot(all_data[f'{COLUMN_X}'])
+    plt.plot(all_data[f'{COLUMN_X}'], marker = 'o')
+    plt.title(Title)
     plt.xlabel(label_X)
     plt.ylabel(label_Y)
     plt.show()
@@ -43,24 +44,14 @@ def USER_INPUT():
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
 
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type Column-X Name(Input)")
+        print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
         if USER in df.columns:
             COLUMN_X = USER
             break
         else:
-            print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type Column-Y Name(Input)")
-        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
-        if USER in df.columns:
-            COLUMN_Y = USER
-            break
-        else:
-            print(f"{Fore.RED}[ ! ] Invaild, Try again")            
+            print(f"{Fore.RED}[ ! ] Invaild, Try again")        
 
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
@@ -72,8 +63,13 @@ def USER_INPUT():
         label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
 
-    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
+        Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+        break
+
+    return FILE, COLUMN_X, label_X, label_Y, Title
 
 def Easy_Option():
-    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y = USER_INPUT()
-    MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y)
+    FILE, COLUMN_X, label_X, label_Y, Title = USER_INPUT()
+    MyFunc(FILE, COLUMN_X, label_X, label_Y, Title)
