@@ -25,6 +25,9 @@ import display.scatter as SCATTER
 import display.plot as PLOT
 import display.hist as HIST
 import display.bar as BAR
+
+import equations.linear as LINEAR
+
 def DEFAULT():
     print(
         Fore.LIGHTGREEN_EX+
@@ -113,6 +116,7 @@ def DEFAULT():
                     "\n"
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Statics     -->  1\n"+
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Operations  -->  2\n"+
+                    f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} equations  -->  3\n"+
                     f"\n"+
                     f"-----------------------------"+
                     f"\n"
@@ -159,6 +163,9 @@ def DEFAULT():
                         else:
                             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
                     break
+                elif USER == "3":
+                    print(f"{Fore.WHITE}[ OK ] Divide Selected")
+                    LINEAR.Easy_Option()
                 else:
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
@@ -166,7 +173,7 @@ def DEFAULT():
             print(
                 f"-----------------------------\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Histogram    -->  1\n"+
-                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} bar          -->  2\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Bar          -->  2\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Plot         -->  3\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Scatter      -->  4\n"+
                 "\n"+
