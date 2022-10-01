@@ -4,6 +4,7 @@ import pandas as pd
 from colorama import Fore
 import getpass
 import time
+import re
 import os
 
 def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
@@ -23,8 +24,12 @@ def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
     mymodel = list(map(myfunc, x))
 
     json = {
-        "x":x.to_string(),
-        "y":y.to_string()
+        "x":{
+            mymodel
+            },
+        "y":{
+            [i for i in y]
+            }
     }
 
     f = open(OUTPUT, "a")
@@ -52,14 +57,18 @@ def USER_INPUT():
             print(f"{Fore.RED}[ ! ] invaild, Try again")
 
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type filename(Output)")
+        print(f"{Fore.LIGHTGREEN_EX}filename(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
         try:
-            f = open(f"{os.getcwd()}/{USER}", "a")
-            f.close()
-            OUTPUT = USER
-            break
+            if re.search(".json", USER):
+                f = open(f"{os.getcwd()}/{USER}", "a")
+                OUTPUT = USER
+                break
+            else:
+                f = open(f"{os.getcwd()}/{USER}.json", "a")
+                OUTPUT = USER + ".json"
+                break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
 

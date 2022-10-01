@@ -29,6 +29,7 @@ import display.bar as BAR
 import equations.linear as LINEAR
 
 def DEFAULT():
+
     print(
         Fore.LIGHTGREEN_EX+
     " ____        _        ____                      \n"+
@@ -39,6 +40,7 @@ def DEFAULT():
     )
 
     while True:
+        # Options
         print(
             Fore.WHITE+
             f"-----------------------------\n"+
@@ -51,9 +53,9 @@ def DEFAULT():
         )
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
-
         if USER == "1":
-            # Functions
+
+            # Options
             while True:
             
                 print(
@@ -70,7 +72,6 @@ def DEFAULT():
                     f"-----------------------------"+
                     f"\n"
                 )
-
                 USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")                
 
                 if USER == '1':
@@ -109,28 +110,27 @@ def DEFAULT():
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
         elif USER == "2":
-            # MathMatics
+            # Options
             while True:
-
                 print(
                     "\n"
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Statics     -->  1\n"+
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Operations  -->  2\n"+
-                    f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} equations  -->  3\n"+
+                    f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} equations   -->  3\n"+
                     f"\n"+
                     f"-----------------------------"+
                     f"\n"
-                )
-            
+                )            
                 USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
                 if USER == '1':
                     print(f"{Fore.WHITE}[ OK ] Statics Selected")
                     STATICS.Easy_Option()
                     break    
-
+                
                 elif USER == '2':
                     while True:
+                        # Options
                         print(
                         "\n"
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Sum        -->  1\n"+
@@ -141,7 +141,6 @@ def DEFAULT():
                         f"-----------------------------"+
                         f"\n"
                     )
-
                         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
                         if USER == "1":
@@ -163,13 +162,17 @@ def DEFAULT():
                         else:
                             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
                     break
+
                 elif USER == "3":
-                    print(f"{Fore.WHITE}[ OK ] Divide Selected")
+                    print(f"{Fore.WHITE}[ OK ] linear Selected")
                     LINEAR.Easy_Option()
+
                 else:
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
         elif USER == "3":
+
+            # Options
             print(
                 f"-----------------------------\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Histogram    -->  1\n"+
@@ -180,7 +183,6 @@ def DEFAULT():
                 f"-----------------------------"+
                 "\n"
             )
-
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
             if USER == "1":
@@ -197,6 +199,7 @@ def DEFAULT():
                 SCATTER.Easy_Option()
             else:
                 print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
+
         else:
             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 
