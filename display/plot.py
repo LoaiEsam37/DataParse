@@ -11,19 +11,29 @@ import getpass
 import time
 
 def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
+    # filename(Input)
     all_data = pd.read_csv(FILE)
+    # plot
     plt.plot(all_data[f'{COLUMN_X}'], marker = 'o')
+    # Title
     plt.title(Title)
+    # Labels
     plt.xlabel(label_X)
     plt.ylabel(label_Y)
+    # show
     plt.show()
 
 def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title):
+    # filename(Input)
     all_data = pd.read_json(FILE)
+    # plot
     plt.plot(all_data[f'{COLUMN_X}'], marker = 'o')
+    # Title
     plt.title(Title)
+    # Labels
     plt.xlabel(label_X)
     plt.ylabel(label_Y)
+    # show
     plt.show()
 
 def USER_INPUT():
@@ -37,13 +47,13 @@ def USER_INPUT():
         "\n"
     )
     USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
     if USER == "1":
         func = "1"
+        # filename(Input)
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+            # CSV
             try:
                 try:
                     f = open(f"{os.getcwd()}/{USER}", "r")
@@ -57,16 +67,15 @@ def USER_INPUT():
                     break
             except:
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
-
+        # filename(Input)
         df = pd.read_csv(FILE)
         for i in df.columns:
             time.sleep(0.1)
             print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
+        # COLUMN
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Input)")
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
             if USER in df.columns:
                 COLUMN_X = USER
                 break
@@ -75,10 +84,11 @@ def USER_INPUT():
     elif USER == "2":
         func = "2"
         COLUMN_X = "empty"
+        # filename(Input)
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+            # JSON
             try:
                 try:
                     f = open(f"{os.getcwd()}/{USER}", "r")
@@ -94,22 +104,22 @@ def USER_INPUT():
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
     else:
         print(f"{Fore.RED}[ ! ] Invaild, Try again")        
-        
+        # filename(Input)
         df = pd.read_json(FILE)
         for i in df.columns:
             time.sleep(0.1)
             print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
+    # Label-X
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
         label_X = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # Label-Y
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-Y Name(Input)")
         label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # Title
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")

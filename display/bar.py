@@ -11,19 +11,24 @@ import getpass
 import time
 
 def MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title):
+    # filename(Input)
     all_data = pd.read_csv(FILE)
+    # bar
     plt.bar(all_data[f'{COLUMN_X}'], all_data[f'{COLUMN_Y}'])
+    # Title
     plt.title(Title)
+    # labels
     plt.xlabel(label_X)
     plt.ylabel(label_Y)
+    # show
     plt.show()
 
 def USER_INPUT():
-    # FILE
+    # filename(Input)
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+        # CSV
         try:
             try:
                 f = open(f"{os.getcwd()}/{USER}", "r")
@@ -37,47 +42,44 @@ def USER_INPUT():
                 break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-
+    # filename(Input)
     df = pd.read_csv(FILE)
     for i in df.columns:
         time.sleep(0.1)
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
+    # COLUMN_X
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column-X Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN_X = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
+    # COLUMN_Y
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column-Y Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN_Y = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")            
-
+    # label-X
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
         label_X = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # label-Y
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-Y Name(Input)")
         label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # Title
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
 
     return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title
 

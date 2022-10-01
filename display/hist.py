@@ -37,37 +37,35 @@ def USER_INPUT():
                 break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-
+    # filename(Input)
     df = pd.read_csv(FILE)
     for i in df.columns:
         time.sleep(0.1)
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
-    while True:
+    # COLUMN
+    while True: 
         print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
+    # label-X
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
         label_X = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # label-Y
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-Y Name(Input)")
         label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
+    # Title
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
 
     return FILE, COLUMN, label_X, label_Y, Title
 
