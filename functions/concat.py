@@ -14,10 +14,11 @@ def MyFunc(DIR, OUTPUT):
         path = os.getcwd()
     else:
         path = os.getcwd()+DIR
+    # ls dir
     files = [file for file in os.listdir(path) if not file.startswith('.') and re.search(".csv", file) and not file == OUTPUT] # Ignore hidden files
-
+    # declare dataframe
     all_months_data = pd.DataFrame()
-
+    # concat files(Input)
     print("\n")
     for file in files:
         try:
@@ -26,15 +27,15 @@ def MyFunc(DIR, OUTPUT):
             print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {file}")
         except:
             pass
-
+    # open filename(output)
     all_months_data.to_csv(OUTPUT, index=False)
 
 def USER_INPUT():
-    # DIR
+
+    # directory(Input)
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Directory(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         try:
             DIR = os.path.join("/", USER)
             test = os.getcwd()+DIR
@@ -42,11 +43,11 @@ def USER_INPUT():
             break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-    # OUTPUT
+    # filename(Output)
     while True:
         print(f"{Fore.LIGHTGREEN_EX}filename(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+        # CSV
         try:
             if re.search(".csv", USER):
                 f = open(f"{os.getcwd()}/{USER}", "a")

@@ -8,16 +8,19 @@ import getpass
 import time
 
 def MyFunc(FILE, COLUMN1, COLUMN2, RES, df):
+    # filename(Input)
     all_data = pd.read_csv(FILE)
+    # multiply
     all_data[f'{RES}'] = all_data[f'{COLUMN1}'] * all_data[f'{COLUMN2}']
+    # filename(Output)
     all_data.to_csv(FILE, index=False)
 
 def USER_INPUT():
-    # FILE
+    # filename(Input)
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+        # CSV
         try:
             try:
                 f = open(f"{os.getcwd()}/{USER}", "r")
@@ -31,32 +34,30 @@ def USER_INPUT():
                 break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-
+    # filename(Input)
     df = pd.read_csv(FILE)
     for i in df.columns:
         time.sleep(0.1)
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
+    # COLUMN1
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column1 Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN1 = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
+    # COLUMN2
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column2 Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN2 = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
+    # OUTPUT COLUMN
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")

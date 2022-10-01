@@ -11,28 +11,34 @@ import getpass
 import time
 
 def MyFunc(FILE, COLUMN1, COLUMN2, CHOOSE):
+    # filename(Input)
     DATA = pd.read_csv(FILE, parse_dates=False)
-
+    # Year
     if CHOOSE == '1':
         DATA[f'{COLUMN2}'] = pd.to_datetime(DATA[f'{COLUMN1}'], errors='coerce')
         DATA[f'{COLUMN2}'] = DATA[f'{COLUMN2}'].dt.year
+    # Month
     if CHOOSE == '2':
         DATA[f'{COLUMN2}'] = pd.to_datetime(DATA[f'{COLUMN1}'], errors='coerce')
         DATA[f'{COLUMN2}'] = DATA[f'{COLUMN2}'].dt.month
+    # Day
     if CHOOSE == '3':
         DATA[f'{COLUMN2}'] = pd.to_datetime(DATA[f'{COLUMN1}'], errors='coerce')
         DATA[f'{COLUMN2}'] = DATA[f'{COLUMN2}'].dt.day
+    # Hour
     if CHOOSE == '4':
         DATA[f'{COLUMN2}'] = pd.to_datetime(DATA[f'{COLUMN1}'], errors='coerce')
         DATA[f'{COLUMN2}'] = DATA[f'{COLUMN2}'].dt.hour
+    # filename(Input)
     DATA.to_csv(FILE, index=False)
 
 def USER_INPUT():
-    # FILE
+
+    # filename(Input)
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
+        # CSV
         try:
             try:
                 f = open(f"{os.getcwd()}/{USER}", "r")
@@ -46,29 +52,29 @@ def USER_INPUT():
                 break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-
+    # filename(Input)
     df = pd.read_csv(FILE)
     for i in df.columns:
         time.sleep(0.1)
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-
+    # Column_1
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-
         if USER in df.columns:
             COLUMN1 = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-
+    # Column_2
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+
         COLUMN2 = USER
         break
-
     while True:
+        # Options
         print(
             f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Year   -->  1\n"+
             f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Month  -->  2\n"+
@@ -82,7 +88,6 @@ def USER_INPUT():
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
-
 
     return FILE, COLUMN1, COLUMN2, CHOOSE
 
