@@ -1,32 +1,10 @@
 #!/usr/bin/python3
+
 import re
 import os
 from colorama import Fore
 import sys
 import getpass
-# Import files Project
-
-import functions.concat as CONCAT
-import functions.dropna as DROPNA
-import functions.dropgroup as DROPCOLUMN
-import functions.droprow as DROPROW
-import functions.dropduplicates as DROPDUPLICATES
-import functions.datetime as DATETIME
-import functions.int as INT
-import functions.datetime_sep as DATETIME_SEP
-
-import mathmatics_functions.statics as STATICS
-import mathmatics_functions.multiply as MULTIPLY
-import mathmatics_functions.minus as MINUS
-import mathmatics_functions.divide as DIVIDE
-import mathmatics_functions.sum as SUM
-
-import display.scatter as SCATTER
-import display.plot as PLOT
-import display.hist as HIST
-import display.bar as BAR
-
-import equations.linear as LINEAR
 
 def DEFAULT():
 
@@ -75,34 +53,42 @@ def DEFAULT():
                 USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")                
 
                 if USER == '1':
+                    import functions.concat as CONCAT
                     print(f"{Fore.WHITE}[ OK ] ConCat Selected")
                     CONCAT.Easy_Option()
                     break
                 elif USER == '2':
+                    import functions.dropna as DROPNA
                     print(f"{Fore.WHITE}[ OK ] DropNA Selected")
                     DROPNA.Easy_Option()
                     break
                 elif USER == '3':
+                    import functions.dropgroup as DROPCOLUMN
                     print(f"{Fore.WHITE}[ OK ] DropColumn Selected")
                     DROPCOLUMN.Easy_Option()
                     break
                 elif USER == '4':
+                    import functions.droprow as DROPROW
                     print(f"{Fore.WHITE}[ OK ] DropRow Selected")
                     DROPROW.Easy_Option()
                     break
                 elif USER == '5':
+                    import functions.dropduplicates as DROPDUPLICATES
                     print(f"{Fore.WHITE}[ OK ] DropDuplicates Selected")
                     DROPDUPLICATES.Easy_Option()
                     break
                 elif USER == '6':
+                    import functions.datetime as DATETIME
                     print(f"{Fore.WHITE}[ OK ] ConvertToDateTime")
                     DATETIME.Easy_Option()
                     break
                 elif USER == '7':
+                    import functions.int as INT
                     print(f"{Fore.WHITE}[ OK ] ConvertToInt")
                     INT.Easy_Option()
                     break
                 elif USER == '8':
+                    import functions.datetime_sep as DATETIME_SEP
                     print(f"{Fore.WHITE}[ OK ] ExtractDate")
                     DATETIME_SEP.Easy_Option()
                     break
@@ -124,6 +110,7 @@ def DEFAULT():
                 USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
                 if USER == '1':
+                    import mathmatics_functions.statics as STATICS
                     print(f"{Fore.WHITE}[ OK ] Statics Selected")
                     STATICS.Easy_Option()
                     break    
@@ -143,19 +130,23 @@ def DEFAULT():
                     )
                         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
-                        if USER == "1":
+                        if USER == "1":     
+                            import mathmatics_functions.sum as SUM
                             print(f"{Fore.WHITE}[ OK ] Sum Selected")
                             SUM.Easy_Option()
                             break
                         elif USER == "2":
+                            import mathmatics_functions.minus as MINUS
                             print(f"{Fore.WHITE}[ OK ] Minus Selected")
                             MINUS.Easy_Option()
                             break
                         elif USER == "3":
+                            import mathmatics_functions.multiply as MULTIPLY
                             print(f"{Fore.WHITE}[ OK ] Multiply Selected")
                             MULTIPLY.Easy_Option()
                             break
                         elif USER == "4":
+                            import mathmatics_functions.divide as DIVIDE
                             print(f"{Fore.WHITE}[ OK ] Divide Selected")
                             DIVIDE.Easy_Option()
                             break
@@ -164,8 +155,10 @@ def DEFAULT():
                     break
 
                 elif USER == "3":
+                    import equations.linear as LINEAR
                     print(f"{Fore.WHITE}[ OK ] linear Selected")
                     LINEAR.Easy_Option()
+                    break
 
                 else:
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
@@ -186,15 +179,19 @@ def DEFAULT():
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
             if USER == "1":
+                import display.hist as HIST
                 print(f"{Fore.WHITE}[ OK ] Histogram Selected")
                 HIST.Easy_Option()
             elif USER == "2":
+                import display.bar as BAR
                 print(f"{Fore.WHITE}[ OK ] bar Selected")
                 BAR.Easy_Option()
             elif USER == "3":
+                import display.plot as PLOT
                 print(f"{Fore.WHITE}[ OK ] Plot Selected")
                 PLOT.Easy_Option()
             elif USER == "4":
+                import display.scatter as SCATTER
                 print(f"{Fore.WHITE}[ OK ] Scatter Selected")
                 SCATTER.Easy_Option()
             else:
