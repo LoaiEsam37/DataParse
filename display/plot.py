@@ -9,6 +9,7 @@ from colorama import Fore
 import sys
 import getpass
 import time
+import json
 
 def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
     # filename(Input)
@@ -24,10 +25,11 @@ def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
     plt.show()
 
 def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title):
-    # filename(Input)
-    all_data = pd.read_json(FILE)
+    # filename (Input)
+    with open(FILE, "r") as read_file:
+        data = json.load(read_file)
     # plot
-    plt.plot(all_data[f'{COLUMN_X}'], marker = 'o')
+    plt.plot(data['x'], data['z'])
     # Title
     plt.title(Title)
     # Labels

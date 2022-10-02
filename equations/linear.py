@@ -6,6 +6,7 @@ import getpass
 import time
 import re
 import os
+import json
 
 def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
 
@@ -23,17 +24,14 @@ def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
 
     mymodel = list(map(myfunc, x))
 
-    json = {
-        "x":{
-            mymodel
-            },
-        "y":{
-            [i for i in y]
-            }
+    data = {
+        "x": [i for i in x],
+        "y": [i for i in y],
+        "z": mymodel
     }
-
-    f = open(OUTPUT, "a")
-    f.write(str(json))
+    #filename(Output)
+    with open(OUTPUT, "w") as write_file:
+        json.dump(data, write_file)
 
 
 def USER_INPUT():
