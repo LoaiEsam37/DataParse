@@ -1,4 +1,3 @@
-from scipy import stats
 import pandas as pd
 import numpy as np
 import re
@@ -18,16 +17,18 @@ def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
     y = y.dropna(how="all")
 
     model = np.poly1d(np.polyfit(x, y, 3))
+    line = np.linspace(1, len(x), 100)
 
     data = {
         "x": [i for i in x],
         "y": [i for i in y],
-        "model": model
+        "model": model,
+        "line": line
     }
+
     #filename(Output)
     with open(OUTPUT, "w") as write_file:
         json.dump(data, write_file)
-
 
 def USER_INPUT():
     # FILE

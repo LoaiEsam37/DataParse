@@ -95,7 +95,7 @@ def DEFAULT():
             # Options
             while True:
                 print(
-                    "\n"
+                    "\n"+
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Statics     -->  1\n"+
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Operations  -->  2\n"+
                     f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} equations   -->  3\n"+
@@ -115,7 +115,7 @@ def DEFAULT():
                     while True:
                         # Options
                         print(
-                        "\n"
+                        "\n"+
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Sum        -->  1\n"+
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Minus      -->  2\n"+
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Multiply   -->  3\n"+
@@ -151,11 +151,38 @@ def DEFAULT():
                     break
 
                 elif USER == "3":
-                    import equations.linear as LINEAR
-                    print(f"{Fore.WHITE}[ OK ] linear Selected")
-                    LINEAR.Easy_Option()
-                    break
+                    while True:
+                        # Options
+                        print(
+                        "\n"+
+                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Linear      -->  1\n"+
+                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Polynomial  -->  2\n"+
+                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Multiple    -->  3\n"+
+                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Logistic    -->  4\n"+
+                        f"\n"+
+                        f"-----------------------------"+
+                        f"\n"
+                    )
+                        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
+                        if USER == "1":
+                            import equations.linear as LINEAR
+                            print(f"{Fore.WHITE}[ OK ] linear Selected")
+                            LINEAR.Easy_Option()
+                            break
+                        elif USER == "2":
+                            import equations.polynomial as POLYNOMIAL
+                            print(f"{Fore.WHITE}[ OK ] Polynomial Selected")
+                            POLYNOMIAL.Easy_Option()
+                            break
+                        elif USER == "3":
+                            pass
+                        elif USER == "4":
+                            pass
+                        else:
+                            print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
+                    break
+                
                 else:
                     print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
 

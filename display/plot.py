@@ -23,10 +23,15 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
+        
+    x = data['x']
+    y = data['y']
+
     if SCATTER:
-        plt.scatter(data['x'], data['y'])
+        plt.scatter(x, y)
     # plot
-    plt.plot(data['x'], data['model'])
+    model = data['model']
+    plt.plot(x, model)
     # Title
     plt.title(Title)
     # Labels
