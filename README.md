@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage)
+[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -32,7 +32,13 @@ It depends on what version you have on your pc.
 $ dataparse
 ```
 
+# Usage
 
+## Concat
+
+![](https://github.com/LoaiEsam37/Images/blob/main/100.png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/101.png)
 
 
 ## Connect Me
