@@ -1,3 +1,4 @@
+from tkinter import Y
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
@@ -7,11 +8,13 @@ import getpass
 import time
 import json
 
-def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
+def MyFunc1(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title):
     # filename(Input)
     all_data = pd.read_csv(FILE)
+    x = all_data[f'{COLUMN_X}']
+    y = all_data[f'{COLUMN_Y}']
     # plot
-    plt.plot(all_data[f'{COLUMN_X}'], marker = 'o')
+    plt.plot(x, y)
     # Title
     plt.title(Title)
     # Labels
@@ -20,7 +23,7 @@ def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
     # show
     plt.show()
 
-def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
+def MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY, BAR):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
@@ -34,6 +37,8 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
     # Scatter option
     if SCATTER:
         plt.scatter(x, y)
+    elif BAR:
+        plt.bar(x, y)
     # Polynomial option
     if POLY:
         try:
@@ -43,11 +48,13 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
         except Exception as e:
             exit(e)
     # Linear option
-    if LINEAR:
+    elif LINEAR:
         try:
             plt.plot(x, model)
         except Exception as e:
             exit(e)
+    else:
+        plt.plot(x, y)
     # Title
     plt.title(Title)
     # Labels
@@ -72,6 +79,7 @@ def USER_INPUT():
         POLY = False
         SCATTER = False
         LINEAR = False
+        BAR = False
         # filename(Input)
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
@@ -95,18 +103,27 @@ def USER_INPUT():
         for i in df.columns:
             time.sleep(0.1)
             print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-        # COLUMN
+        # COLUMNS
         while True:
-            print(f"{Fore.LIGHTGREEN_EX}Type Column Name(Input)")
+            print(f"{Fore.LIGHTGREEN_EX}Type Column-X Name(Input)")
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
             if USER in df.columns:
                 COLUMN_X = USER
                 break
             else:
+                print(f"{Fore.RED}[ ! ] Invaild, Try again")   
+        while True:
+            print(f"{Fore.LIGHTGREEN_EX}Type Column-Y Name(Input)")
+            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+            if USER in df.columns:
+                COLUMN_Y = USER
+                break
+            else:
                 print(f"{Fore.RED}[ ! ] Invaild, Try again")        
     elif USER == "2":
         func = "2"
-        COLUMN_X = "empty"
+        COLUMN_X = False
+        COLUMN_Y = False
         # filename(Input)
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
@@ -127,43 +144,57 @@ def USER_INPUT():
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
         # Scatter option
         while True:
-            print(f"{Fore.LIGHTGREEN_EX}Do you want to display original data (yes  -->  1, No  -->  2)")
+            print(
+                "\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Scatter  -->  1\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Bar      -->  2\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} None     -->  3\n"+
+                f"\n"+
+                f"-----------------------------"+
+                f"\n"
+            )
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
             if USER == "1":
                 SCATTER = True
+                BAR = False
                 break
             elif USER == "2":
+                BAR = True
+                SCATTER = False
+                break
+            elif USER == "3":
+                BAR = False
                 SCATTER = False
                 break
             else:
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
-        # Polynomial option
+        # options
         while True:
-            print(f"{Fore.LIGHTGREEN_EX}Is it Polynomial (yes  -->  1, No  -->  2)")
+            print(
+                "\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Polynomial  -->  1\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Linear      -->  2\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Other       -->  3\n"+
+                f"\n"+
+                f"-----------------------------"+
+                f"\n"
+                )
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
             if USER == "1":
                 POLY = True
+                LINEAR = False
                 break
             elif USER == "2":
                 POLY = False
+                LINEAR = True
+                break
+            elif USER == "3":
+                POLY = False
+                LINEAR = False
                 break
             else:
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
-        # Linear option    
-        if not POLY:
-            while True:
-                print(f"{Fore.LIGHTGREEN_EX}Is it Linear (yes  -->  1, No  -->  2)")
-                USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-                if USER == "1":
-                    LINEAR = True
-                    break
-                elif USER == "2":
-                    LINEAR = False
-                    break
-                else:
-                    print(f"{Fore.RED}[ ! ] invaild, Try again")
-        else:
-            LINEAR = False
+
     else:
         print(f"{Fore.RED}[ ! ] Invaild, Try again")        
 
@@ -183,11 +214,11 @@ def USER_INPUT():
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
     
-    return FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY
+    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY, BAR
 
 def Easy_Option():
-    FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY = USER_INPUT()
+    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY, BAR = USER_INPUT()
     if func == "1":
-        MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title)
+        MyFunc1(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title)
     if func == "2":
-        MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY)
+        MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY, BAR)
