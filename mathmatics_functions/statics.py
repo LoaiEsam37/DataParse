@@ -34,6 +34,15 @@ def MyFunc(FILE):
     print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} MEAN")
     print("-----------------------------\n")
     print(DATA.mean(numeric_only=True))
+    print("-----------------------------\n\n")  
+    print("\n")
+    print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Standard Deviation")
+    print("-----------------------------\n")
+    print(DATA.std(numeric_only=True))
+    print("-----------------------------\n\n")   
+    print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} variance")
+    print("-----------------------------\n")
+    print(DATA.var(numeric_only=True))
     print("-----------------------------\n\n")    
 
 
