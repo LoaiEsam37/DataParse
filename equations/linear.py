@@ -1,10 +1,9 @@
-import matplotlib.pyplot as plt
 from scipy import stats
 import pandas as pd
 from colorama import Fore
+import re
 import getpass
 import time
-import re
 import os
 import json
 
@@ -22,12 +21,12 @@ def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
     def myfunc(x):
         return slope * x + intercept
 
-    mymodel = list(map(myfunc, x))
+    model = list(map(myfunc, x))
 
     data = {
         "x": [i for i in x],
         "y": [i for i in y],
-        "z": mymodel
+        "model": model
     }
     #filename(Output)
     with open(OUTPUT, "w") as write_file:
