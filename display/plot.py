@@ -24,18 +24,17 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
-        
+    # Declare json variables
     x = data['x']
     y = data['y']
-    
     try:
         model = data['model']
     except:
         pass
-
+    # Scatter option
     if SCATTER:
         plt.scatter(x, y)
-
+    # Polynomial option
     if POLY:
         try:
             model = np.poly1d(np.polyfit(x, y, 3))
@@ -43,7 +42,7 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
             plt.plot(line, model(line))
         except Exception as e:
             exit(e)
-
+    # Linear option
     if LINEAR:
         try:
             plt.plot(x, model)
@@ -70,6 +69,9 @@ def USER_INPUT():
     USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
     if USER == "1":
         func = "1"
+        POLY = False
+        SCATTER = False
+        LINEAR = False
         # filename(Input)
         while True:
             print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
@@ -123,13 +125,48 @@ def USER_INPUT():
                     break
             except:
                 print(f"{Fore.RED}[ ! ] invaild, Try again")
+        # Scatter option
+        while True:
+            print(f"{Fore.LIGHTGREEN_EX}Do you want to display original data (yes  -->  1, No  -->  2)")
+            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+            if USER == "1":
+                SCATTER = True
+                break
+            elif USER == "2":
+                SCATTER = False
+                break
+            else:
+                print(f"{Fore.RED}[ ! ] invaild, Try again")
+        # Polynomial option
+        while True:
+            print(f"{Fore.LIGHTGREEN_EX}Is it Polynomial (yes  -->  1, No  -->  2)")
+            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+            if USER == "1":
+                POLY = True
+                break
+            elif USER == "2":
+                POLY = False
+                break
+            else:
+                print(f"{Fore.RED}[ ! ] invaild, Try again")
+        # Linear option    
+        if not POLY:
+            while True:
+                print(f"{Fore.LIGHTGREEN_EX}Is it Linear (yes  -->  1, No  -->  2)")
+                USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+                if USER == "1":
+                    LINEAR = True
+                    break
+                elif USER == "2":
+                    LINEAR = False
+                    break
+                else:
+                    print(f"{Fore.RED}[ ! ] invaild, Try again")
+        else:
+            LINEAR = False
     else:
         print(f"{Fore.RED}[ ! ] Invaild, Try again")        
-        # filename(Input)
-        df = pd.read_json(FILE)
-        for i in df.columns:
-            time.sleep(0.1)
-            print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
+
     # Label-X
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
@@ -145,46 +182,7 @@ def USER_INPUT():
         print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
-
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Do you want to display original data (yes  -->  1, No  -->  2)")
-        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        if USER == "1":
-            SCATTER = True
-            break
-        elif USER == "2":
-            SCATTER = False
-            break
-        else:
-            print(f"{Fore.RED}[ ! ] invaild, Try again")
-        
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Is it Polynomial (yes  -->  1, No  -->  2)")
-        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        if USER == "1":
-            POLY = True
-            break
-        elif USER == "2":
-            POLY = False
-            break
-        else:
-            print(f"{Fore.RED}[ ! ] invaild, Try again")
-        
-    if not POLY:
-        while True:
-            print(f"{Fore.LIGHTGREEN_EX}Is it Linear (yes  -->  1, No  -->  2)")
-            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-            if USER == "1":
-                LINEAR = True
-                break
-            elif USER == "2":
-                LINEAR = False
-                break
-            else:
-                print(f"{Fore.RED}[ ! ] invaild, Try again")
-
-    else:
-        LINEAR = False
+    
     return FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY
 
 def Easy_Option():
