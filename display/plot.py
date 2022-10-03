@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 from colorama import Fore
+import numpy as np
 import getpass
 import time
 import json
@@ -19,19 +20,31 @@ def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
     # show
     plt.show()
 
-def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER):
+def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
         
     x = data['x']
     y = data['y']
-
+    try:
+        model = data['model']
+    except:
+        pass
     if SCATTER:
-        plt.scatter(x, y)
-    # plot
-    model = data['model']
-    plt.plot(x, model)
+        plt.bar(x, y)
+    if POLY:
+        try:
+            model = np.poly1d(np.polyfit(x, y, 3))
+            line = np.linspace(1, len(x), 100)
+            plt.plot(line, model(line))
+        except Exception as e:
+            exit(e)
+    if LINEAR:
+        try:
+            plt.plot(x, model)
+        except Exception as e:
+            exit(e)
     # Title
     plt.title(Title)
     # Labels
@@ -140,12 +153,39 @@ def USER_INPUT():
             break
         else:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
+        
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}Is it Polynomial (yes  -->  1, No  -->  2)")
+        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+        if USER == "1":
+            POLY = True
+            break
+        elif USER == "2":
+            POLY = False
+            break
+        else:
+            print(f"{Fore.RED}[ ! ] invaild, Try again")
+        
+    if not POLY:
+        while True:
+            print(f"{Fore.LIGHTGREEN_EX}Is it Linear (yes  -->  1, No  -->  2)")
+            USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+            if USER == "1":
+                LINEAR = True
+                break
+            elif USER == "2":
+                LINEAR = False
+                break
+            else:
+                print(f"{Fore.RED}[ ! ] invaild, Try again")
 
-    return FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER
+    else:
+        LINEAR = False
+    return FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY
 
 def Easy_Option():
-    FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER = USER_INPUT()
+    FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY = USER_INPUT()
     if func == "1":
         MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title)
     if func == "2":
-        MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER)
+        MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY)

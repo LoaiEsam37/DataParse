@@ -5,6 +5,7 @@ from colorama import Fore
 import getpass
 import time
 import os
+import matplotlib.pyplot as plt
 import json
 
 def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
@@ -16,14 +17,9 @@ def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
     x = x.dropna(how="all")
     y = y.dropna(how="all")
 
-    model = np.poly1d(np.polyfit(x, y, 3))
-    line = np.linspace(1, len(x), 100)
-
     data = {
         "x": [i for i in x],
-        "y": [i for i in y],
-        "model": model,
-        "line": line
+        "y": [i for i in y]
     }
 
     #filename(Output)
