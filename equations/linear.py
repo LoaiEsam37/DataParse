@@ -54,7 +54,7 @@ def USER_INPUT():
             print(f"{Fore.RED}[ ! ] invaild, Try again")
 
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}filename(Output)")
+        print(f"{Fore.LIGHTGREEN_EX}Type filename(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
 
         try:

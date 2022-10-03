@@ -27,12 +27,15 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
         
     x = data['x']
     y = data['y']
+    
     try:
         model = data['model']
     except:
         pass
+
     if SCATTER:
-        plt.bar(x, y)
+        plt.scatter(x, y)
+
     if POLY:
         try:
             model = np.poly1d(np.polyfit(x, y, 3))
@@ -40,6 +43,7 @@ def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
             plt.plot(line, model(line))
         except Exception as e:
             exit(e)
+
     if LINEAR:
         try:
             plt.plot(x, model)
