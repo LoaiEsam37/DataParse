@@ -1,9 +1,5 @@
-#!/usr/bin/python3
-
-import re
-import os
+#!/usr/bin/python
 from colorama import Fore
-import sys
 import getpass
 
 def DEFAULT():

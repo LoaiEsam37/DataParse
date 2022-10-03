@@ -1,29 +1,40 @@
+from scipy import stats
 import pandas as pd
-import os
-import matplotlib.pyplot as plt
+import numpy as np
+import re
 from colorama import Fore
 import getpass
 import time
+import os
+import json
 
-def MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title):
-    # filename(Input)
-    all_data = pd.read_csv(FILE)
-    # Scatter
-    plt.scatter(all_data[f'{COLUMN_X}'], all_data[f'{COLUMN_Y}'])
-    # Title
-    plt.title(Title)
-    # Labels
-    plt.xlabel(label_X)
-    plt.ylabel(label_Y)
-    # show
-    plt.show()
+def MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT):
+
+    df = pd.read_csv(FILE, parse_dates=False)
+    x = df[f'{COLUMN_X}']
+    y = df[f'{COLUMN_Y}']
+
+    x = x.dropna(how="all")
+    y = y.dropna(how="all")
+
+    model = np.poly1d(np.polyfit(x, y, 3))
+
+    data = {
+        "x": [i for i in x],
+        "y": [i for i in y],
+        "model": model
+    }
+    #filename(Output)
+    with open(OUTPUT, "w") as write_file:
+        json.dump(data, write_file)
+
 
 def USER_INPUT():
-    # filename(Input)
+    # FILE
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type filename(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        # CSV
+
         try:
             try:
                 f = open(f"{os.getcwd()}/{USER}", "r")
@@ -37,47 +48,50 @@ def USER_INPUT():
                 break
         except:
             print(f"{Fore.RED}[ ! ] invaild, Try again")
-    # filename(Input)
+
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}filename(Output)")
+        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+
+        try:
+            if re.search(".json", USER):
+                f = open(f"{os.getcwd()}/{USER}", "a")
+                OUTPUT = USER
+                break
+            else:
+                f = open(f"{os.getcwd()}/{USER}.json", "a")
+                OUTPUT = USER + ".json"
+                break
+        except:
+            print(f"{Fore.RED}[ ! ] invaild, Try again")
+
     df = pd.read_csv(FILE)
     for i in df.columns:
         time.sleep(0.1)
         print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {i}")
-    # COLUMN-X
+
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column-X Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+
         if USER in df.columns:
             COLUMN_X = USER
             break
         else:
             print(f"{Fore.RED}[ ! ] Invaild, Try again")
-    # COLUMN-Y
+
     while True:
         print(f"{Fore.LIGHTGREEN_EX}Type Column-Y Name(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+
         if USER in df.columns:
             COLUMN_Y = USER
             break
         else:
-            print(f"{Fore.RED}[ ! ] Invaild, Try again")            
-    # Label-X
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type label-X Name(Input)")
-        label_X = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        break
-    # Label-Y
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type label-Y Name(Input)")
-        label_Y = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        break
-    # Title
-    while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type Title Name(Input)")
-        Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
-        break
+            print(f"{Fore.RED}[ ! ] Invaild, Try again")
 
-    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title
+    return FILE, COLUMN_X, COLUMN_Y, OUTPUT
 
 def Easy_Option():
-    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title = USER_INPUT()
-    MyFunc(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title)
+    FILE, COLUMN_X, COLUMN_Y, OUTPUT = USER_INPUT()
+    MyFunc(FILE, COLUMN_X, COLUMN_Y, OUTPUT)

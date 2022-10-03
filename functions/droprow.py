@@ -1,10 +1,6 @@
 import re
 import pandas as pd
-import numpy as np
 import os
-import matplotlib.pyplot as plt
-from itertools import combinations
-from collections import Counter
 from colorama import Fore
 import sys
 import getpass

@@ -1,12 +1,7 @@
-import re
 import pandas as pd
-import numpy as np
 import os
 import matplotlib.pyplot as plt
-from itertools import combinations
-from collections import Counter
 from colorama import Fore
-import sys
 import getpass
 import time
 import json
@@ -24,12 +19,14 @@ def MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title):
     # show
     plt.show()
 
-def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title):
+def MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
+    if SCATTER:
+        plt.scatter(data['x'], data['y'])
     # plot
-    plt.plot(data['x'], data['z'])
+    plt.plot(data['x'], data['model'])
     # Title
     plt.title(Title)
     # Labels
@@ -127,11 +124,23 @@ def USER_INPUT():
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
 
-    return FILE, COLUMN_X, label_X, label_Y, Title, func
+    while True:
+        print(f"{Fore.LIGHTGREEN_EX}Do you want to display original data (yes  -->  1, No  -->  2)")
+        USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
+        if USER == "1":
+            SCATTER = True
+            break
+        elif USER == "2":
+            SCATTER = False
+            break
+        else:
+            print(f"{Fore.RED}[ ! ] invaild, Try again")
+
+    return FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER
 
 def Easy_Option():
-    FILE, COLUMN_X, label_X, label_Y, Title, func = USER_INPUT()
+    FILE, COLUMN_X, label_X, label_Y, Title, func, SCATTER = USER_INPUT()
     if func == "1":
         MyFunc1(FILE, COLUMN_X, label_X, label_Y, Title)
     if func == "2":
-        MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title)
+        MyFunc2(FILE, COLUMN_X, label_X, label_Y, Title, SCATTER)
