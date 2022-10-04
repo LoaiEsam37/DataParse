@@ -22,7 +22,7 @@ def MyFunc1(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title):
     # show
     plt.show()
 
-def MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY, BAR):
+def MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY):
     # filename (Input)
     with open(FILE, "r") as read_file:
         data = json.load(read_file)
@@ -36,8 +36,6 @@ def MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY, BAR):
     # Scatter option
     if SCATTER:
         plt.scatter(x, y)
-    elif BAR:
-        plt.bar(x, y)
     # Polynomial option
     if POLY:
         try:
@@ -146,7 +144,6 @@ def USER_INPUT():
             print(
                 "\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Scatter  -->  1\n"+
-                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Bar      -->  2\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} None     -->  3\n"+
                 f"\n"+
                 f"-----------------------------"+
@@ -155,14 +152,11 @@ def USER_INPUT():
             USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
             if USER == "1":
                 SCATTER = True
-                BAR = False
                 break
             elif USER == "2":
-                BAR = True
                 SCATTER = False
                 break
             elif USER == "3":
-                BAR = False
                 SCATTER = False
                 break
             else:
@@ -213,11 +207,11 @@ def USER_INPUT():
         Title = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         break
     
-    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY, BAR
+    return FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY
 
 def Easy_Option():
-    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY, BAR = USER_INPUT()
+    FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title, func, SCATTER, LINEAR, POLY = USER_INPUT()
     if func == "1":
         MyFunc1(FILE, COLUMN_X, COLUMN_Y, label_X, label_Y, Title)
     if func == "2":
-        MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY, BAR)
+        MyFunc2(FILE, label_X, label_Y, Title, SCATTER, LINEAR, POLY)

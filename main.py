@@ -157,8 +157,6 @@ def DEFAULT():
                         "\n"+
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Linear      -->  1\n"+
                         f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Polynomial  -->  2\n"+
-                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Multiple    -->  3\n"+
-                        f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Logistic    -->  4\n"+
                         f"\n"+
                         f"-----------------------------"+
                         f"\n"
@@ -175,10 +173,6 @@ def DEFAULT():
                             print(f"{Fore.WHITE}[ OK ] Polynomial Selected")
                             POLYNOMIAL.Easy_Option()
                             break
-                        elif USER == "3":
-                            pass
-                        elif USER == "4":
-                            pass
                         else:
                             print(f"{Fore.RED}[ ! ] Invaild Option, Try again")
                     break

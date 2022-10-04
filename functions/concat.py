@@ -44,17 +44,20 @@ def USER_INPUT():
         print(f"{Fore.LIGHTGREEN_EX}filename(Output)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         # CSV
-        try:
-            if re.search(".csv", USER):
-                f = open(f"{os.getcwd()}/{USER}", "a")
-                OUTPUT = USER
-                break
-            else:
-                f = open(f"{os.getcwd()}/{USER}.csv", "a")
-                OUTPUT = USER + ".csv"
-                break
-        except:
+        if USER == "":
             print(f"{Fore.RED}[ ! ] invaild, Try again")
+        else:
+            try:
+                if re.search(".csv", USER):
+                    f = open(f"{os.getcwd()}/{USER}", "a")
+                    OUTPUT = USER
+                    break
+                else:
+                    f = open(f"{os.getcwd()}/{USER}.csv", "a")
+                    OUTPUT = USER + ".csv"
+                    break
+            except:
+                print(f"{Fore.RED}[ ! ] invaild, Try again")
 
     return DIR, OUTPUT
 
