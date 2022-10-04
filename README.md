@@ -140,7 +140,7 @@ $ dataparse
 
 ## Statics
 
-* This Function is to get the mean, mode, median, standard deviation, variance, min, max
+### This Function is to get the mean, mode, median, standard deviation, variance, min, max
 
 * Steps :
 
@@ -178,6 +178,8 @@ $ dataparse
 |  2 | USB-C Charging Cable   |                  1 |        11.95 | 2019-09-30 00:18:00 | 250 Meadow St, San Francisco, CA 94016 |   11.95 |
 
 ## Linear
+
+### This Function is to Do Linear Equation
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(15).png)
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(16).png)
