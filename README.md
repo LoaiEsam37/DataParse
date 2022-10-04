@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn)
+[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -73,6 +73,14 @@ $ dataparse
 * steps
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
+
+## DropDuplicates
+
+### This Function is for drop duplicates from the Column that you want
+
+* steps
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(6).png)
 
 ## Connect Me
 
