@@ -36,9 +36,19 @@ $ dataparse
 
 ## Concat
 
-![](https://github.com/LoaiEsam37/Images/blob/main/100.png)
+### This function is for concat a directory that full of csv files into a single file
 
-![](https://github.com/LoaiEsam37/Images/blob/main/101.png)
+* Here we have a directory that i want to concat to ``all.csv``
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(1).png)
+
+```
+$ dataparse
+```
+
+* Steps
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
 
 ## Connect Me
