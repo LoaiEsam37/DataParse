@@ -181,10 +181,14 @@ $ dataparse
 
 ### This Function is to Do Linear Equation
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(15).png)
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(16).png)
+* Steps :
+
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(17).png)
 
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(18).png)
+
+* Next step to Show the Data on Matplotlib
+[Plot](#Plot)
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
