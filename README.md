@@ -48,7 +48,7 @@ $ dataparse
 $ dataparse
 ```
 
-* Steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
@@ -56,7 +56,7 @@ $ dataparse
 
 ### This Function is for drop all NaN in csv file
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
 
@@ -72,7 +72,7 @@ $ dataparse
 
 ### This Function is for drop the row from csv file that you want
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
 
@@ -80,7 +80,7 @@ $ dataparse
 
 ### This Function is for drop duplicates from the Column that you want
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(6).png)
 
@@ -88,7 +88,7 @@ $ dataparse
 
 ### This Function is to convert Column Values into DateTime
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(7).png)
 
@@ -96,7 +96,7 @@ $ dataparse
 
 ### This Function is to convert Column Values into Int
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(8).png)
 
@@ -118,11 +118,11 @@ $ dataparse
 |  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |
 |  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |
 
-* steps
+* steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(9).png)
 
-* Result
+* Result :
 
 |    | Product                | Quantity Ordered   |   Price Each | Order Date          | Purchase Address                         |   Day |
 |---:|:-----------------------|:-------------------|:-------------|:--------------------|:-----------------------------------------|:------|
@@ -140,11 +140,13 @@ $ dataparse
 
 ## Statics
 
-* This Function is to get the mean, mode, median, STD, VAR, min, max
+* This Function is to get the mean, mode, median, standard deviation, variance, min, max
 
-* steps
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(10).png)
+
+* Result :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(11).png)
 
