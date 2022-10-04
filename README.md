@@ -201,6 +201,24 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(20).png)
 
+* [Next step](#Plot) to Show the Data on Matplotlib
+
+# Display
+
+## Histogram
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(21).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(22).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(23).png)
+
+## Bar
+
+## Plot
+
+## Scatter
+
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
