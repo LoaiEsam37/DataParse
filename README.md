@@ -8,6 +8,8 @@
 
 [Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
+[CSV Model for trainnig](https://github.com/LoaiEsam37/csv)
+
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
     $ cd DataParse
@@ -195,7 +197,9 @@ $ dataparse
 
 * Steps :
 
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(19).png)
 
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(20).png)
 
 ## Connect Me
 
