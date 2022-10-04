@@ -187,8 +187,16 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(18).png)
 
-* Next step to Show the Data on Matplotlib
-[Plot](#Plot)
+* [Next step](#Plot) to Show the Data on Matplotlib
+
+## Polynomial
+
+### This Function is to do Polynomial Equation
+
+* Steps :
+
+
+
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
