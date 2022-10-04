@@ -207,13 +207,27 @@ $ dataparse
 
 ## Histogram
 
+* Steps :
+
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(21).png)
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(22).png)
 
+* Result :
+
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(23).png)
 
 ## Bar
+
+* Steps :
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(24).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(25).png)
+
+* Result :
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(26).png)
 
 ## Plot
 
