@@ -141,7 +141,14 @@ $ dataparse
 ## Statics
 
 * This Function is to get the mean, mode, median, STD, VAR, min, max
+
+* steps
+
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(10).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(11).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(12).png)
 
 ## Connect Me
 
