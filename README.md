@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa)
+[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -65,6 +65,14 @@ $ dataparse
 * steps
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
+
+## DropRaw
+
+### This Function is for drop the raw from csv file that you want
+
+* steps
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
 
 ## Connect Me
 
