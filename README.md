@@ -90,11 +90,6 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(7).png)
 
-### This Function is for drop duplicates from the Column that you want
-
-* steps
-
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(6).png)
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
