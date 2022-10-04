@@ -102,20 +102,19 @@ $ dataparse
 
 ### This Function is to Extract a Specific kind of date from another Column like: Year, Month, Day, Hour
 
-* In This Example We have ``Order Date`` Column and We Want to Extract The Day from it and Put The Values to A new Column named Day:
+* In This Example We have ``Order Date`` Column and We Want to Extract The Day from it and Put The Values to A new Column named ``Day``:
 
 |    | Product                | Quantity Ordered   |   Price Each | Order Date          | Purchase Address                         |
 |---:|:-----------------------|:-------------------|:-------------|:--------------------|:-----------------------------------------|
 |  0 | LG Dryer               | 1                  |       600    | 2019-03-09 16:34:00 | 683 12th St, Los Angeles, CA 90001       |
 |  1 | LG Washing Machine     | 1                  |       600    | 2019-09-18 17:32:00 | 925 Forest St, San Francisco, CA 94016   |
-|  2 | Vareebadd Phone        | 1                  |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |
-|  3 | Product                | Quantity Ordered   |       nan    | nan                 | Purchase Address                         |
-|  4 | 20in Monitor           | 1                  |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |
-|  5 | 27in FHD Monitor       | 1                  |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |
-|  6 | Flatscreen TV          | 1                  |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |
-|  7 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |
-|  8 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |
-|  9 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |
+|  2 | Vareebadd Phone        | 1                  |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |              |
+|  3 | 20in Monitor           | 1                  |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |
+|  4 | 27in FHD Monitor       | 1                  |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |
+|  5 | Flatscreen TV          | 1                  |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |
+|  6 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |
+|  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |
+|  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |
 
 * steps
 
@@ -127,14 +126,13 @@ $ dataparse
 |---:|:-----------------------|:-------------------|:-------------|:--------------------|:-----------------------------------------|:------|
 |  0 | LG Dryer               | 1                  |       600    | 2019-03-09 16:34:00 | 683 12th St, Los Angeles, CA 90001       |     9 |
 |  1 | LG Washing Machine     | 1                  |       600    | 2019-09-18 17:32:00 | 925 Forest St, San Francisco, CA 94016   |    18 |
-|  2 | Vareebadd Phone        | 1                  |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |     9 |
-|  3 | Product                | Quantity Ordered   |       nan    | nan                 | Purchase Address                         |   nan |
-|  4 | 20in Monitor           | 1                  |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |    18 |
-|  5 | 27in FHD Monitor       | 1                  |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |    14 |
-|  6 | Flatscreen TV          | 1                  |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |    18 |
-|  7 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |    29 |
-|  8 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |    18 |
-|  9 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |    24 |
+|  2 | Vareebadd Phone        | 1                  |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |     9 |                     |   nan |
+|  3 | 20in Monitor           | 1                  |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |    18 |
+|  4 | 27in FHD Monitor       | 1                  |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |    14 |
+|  5 | Flatscreen TV          | 1                  |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |    18 |
+|  6 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |    29 |
+|  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |    18 |
+|  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |    24 |
 
 ## Connect Me
 
