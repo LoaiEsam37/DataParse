@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [Statics](#Statics) | [Operations](#Operations) | [Sum](#Sum) | [Minus](#Minus) | [Multiply](#Multiply) | [Divide](#Divide) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
+[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions)| [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Sum](#Sum) | [Minus](#Minus) | [Multiply](#Multiply) | [Divide](#Divide) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -33,6 +33,8 @@ $ dataparse
 ```
 
 # Usage
+
+# Functions
 
 ## Concat
 
@@ -133,6 +135,8 @@ $ dataparse
 |  6 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |    29 |
 |  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |    18 |
 |  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |    24 |
+
+
 
 ## Connect Me
 
