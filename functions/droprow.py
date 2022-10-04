@@ -40,7 +40,7 @@ def USER_INPUT():
     print(f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} {df.index[-1]}")
     # ROW
     while True:
-        print(f"{Fore.LIGHTGREEN_EX}Type Row Name(Input)")
+        print(f"{Fore.LIGHTGREEN_EX}Type Row Number(Input)")
         USER = input(f"{Fore.WHITE}{getpass.getuser()}@DataParse$ ")
         try:
             USER = int(USER)
