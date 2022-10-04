@@ -66,9 +66,9 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
 
-## DropRaw
+## DropRow
 
-### This Function is for drop the raw from csv file that you want
+### This Function is for drop the row from csv file that you want
 
 * steps
 
