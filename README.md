@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat)
+[Installation](#Installation) | [Usage](#Usage) | [Concat](#Concat) | [DropNa](#DropNa)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -36,7 +36,7 @@ $ dataparse
 
 ## Concat
 
-### This function is for concat a directory that full of csv files into a single file
+### This Function is for concat a directory that full of csv files into a single file
 
 * Here we have a directory that i want to concat to ``all.csv``
 
@@ -50,6 +50,21 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
+## DropNa
+
+### This Function is for drop all NaN in csv file
+
+* steps
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
+
+## DropColumn
+
+### This Function is for drop the column from csv file that you want
+
+* steps
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
 
 ## Connect Me
 
