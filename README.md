@@ -177,6 +177,12 @@ $ dataparse
 |  1 | AAA Batteries (4-pack) |                  3 |         2.99 | 2019-09-17 20:56:00 | 840 Highland St, Los Angeles, CA 90001 |    8.97 |
 |  2 | USB-C Charging Cable   |                  1 |        11.95 | 2019-09-30 00:18:00 | 250 Meadow St, San Francisco, CA 94016 |   11.95 |
 
+## Linear
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(15).png)
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(16).png)
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(17).png)
+
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
