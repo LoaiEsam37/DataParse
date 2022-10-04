@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions)| [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Sum](#Sum) | [Minus](#Minus) | [Multiply](#Multiply) | [Divide](#Divide) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
+[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Sum](#Sum) | [Minus](#Minus) | [Multiply](#Multiply) | [Divide](#Divide) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
