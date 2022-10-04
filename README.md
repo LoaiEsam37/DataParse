@@ -136,7 +136,12 @@ $ dataparse
 |  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |    18 |
 |  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |    24 |
 
+# MathMatics
 
+## Statics
+
+* This Function is to get the mean, mode, median, STD, VAR, min, max
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(10).png)
 
 ## Connect Me
 
