@@ -152,6 +152,44 @@ $ dataparse
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(12).png)
 
+## Operations
+
+* This Function is to Sum, Subtract, Divide, Multiply Two Columns and put the value in a new Column
+
+* In This Example we need to Multiply ``Quantity Ordered`` with ``Price Each`` and put the values in a new Column named ``Sales`` 
+
+|    | Product                | Quantity Ordered   |   Price Each | Order Date          | Purchase Address                         |
+|---:|:-----------------------|:-------------------|:-------------|:--------------------|:-----------------------------------------|
+|  0 | LG Dryer               | 1                  |       600    | 2019-03-09 16:34:00 | 683 12th St, Los Angeles, CA 90001       |
+|  1 | LG Washing Machine     | 1                  |       600    | 2019-09-18 17:32:00 | 925 Forest St, San Francisco, CA 94016   |
+|  2 | Vareebadd Phone        | 1                  |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |
+|  3 | 20in Monitor           | 1                  |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |
+|  4 | 27in FHD Monitor       | 1                  |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |
+|  5 | Flatscreen TV          | 1                  |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |
+|  6 | Macbook Pro Laptop     | 1                  |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    |
+|  7 | Wired Headphones       | 1                  |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |
+|  8 | 27in 4K Gaming Monitor | 1                  |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |
+
+* Steps :
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(13).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(14).png)
+
+* Result :
+
+|    | Product                |   Quantity Ordered |   Price Each | Order Date          | Purchase Address                         |   Sales |
+|---:|:-----------------------|-------------------:|-------------:|:--------------------|:-----------------------------------------|--------:|
+|  0 | LG Dryer               |                  1 |       600    | 2019-03-09 16:34:00 | 683 12th St, Los Angeles, CA 90001       |  600    |
+|  1 | LG Washing Machine     |                  1 |       600    | 2019-09-18 17:32:00 | 925 Forest St, San Francisco, CA 94016   |  600    |
+|  2 | Vareebadd Phone        |                  1 |       400    | 2019-06-09 14:02:00 | 853 5th St, Los Angeles, CA 90001        |  400    |
+|  3 | 20in Monitor           |                  1 |       109.99 | 2019-09-18 09:10:00 | 188 11th St, Austin, TX 73301            |  109.99 |
+|  4 | 27in FHD Monitor       |                  1 |       149.99 | 2019-09-14 16:06:00 | 172 Washington St, Los Angeles, CA 90001 |  149.99 |
+|  5 | Flatscreen TV          |                  1 |       300    | 2019-09-18 14:54:00 | 930 North St, Seattle, WA 98101          |  300    |
+|  6 | Macbook Pro Laptop     |                  1 |      1700    | 2019-09-29 13:37:00 | 926 North St, San Francisco, CA 94016    | 1700    |
+|  7 | Wired Headphones       |                  1 |        11.99 | 2019-09-18 10:13:00 | 877 Lincoln St, Boston, MA 02215         |   11.99 |
+|  8 | 27in 4K Gaming Monitor |                  1 |       389.99 | 2019-09-24 22:16:00 | 501 Adams St, Seattle, WA 98101          |  389.99 |
+
 ## Connect Me
 
 <a href="https://linkedin.com/in/loai-esam-109971215" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="loai-esam-109971215" height="30" width="40" /></a>
