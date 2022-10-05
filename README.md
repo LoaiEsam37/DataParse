@@ -6,7 +6,7 @@
 
 ### DataParse is a tool that can help you in data anaylatics Basic Tasks
 
-[CSV Model for trainnig](https://github.com/LoaiEsam37/csv)
+[CSV Model for trainig](https://github.com/LoaiEsam37/csv)
 
 [Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
