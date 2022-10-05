@@ -8,7 +8,7 @@
 
 [CSV Model for trainig](https://github.com/LoaiEsam37/csv)
 
-[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat_:-) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
+[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -38,8 +38,8 @@ $ dataparse
 
 ## Functions
 
-### Concat_:-
-
+### Concat
+<hr>
    This Function is for concat a directory that full of csv files into a single file
 
    * Here we have a directory that i want to concat to ``all.csv``
@@ -54,7 +54,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
-### DropNa_:-
+### DropNa
 
    This Function is for drop all NaN in csv file
 
@@ -62,7 +62,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
 
-### DropColumn_:-
+### DropColumn
 
    This Function is for drop the column from csv file that you want
 
@@ -70,7 +70,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
 
-### DropRow_:-
+### DropRow
 
    This Function is for drop the row from csv file that you want
 
@@ -78,7 +78,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
 
-### DropDuplicates :-
+### DropDuplicates
 
    This Function is for drop duplicates from the Column that you want
 
@@ -86,7 +86,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(6).png)
 
-### ConvertToDateTime :-
+### ConvertToDateTime
 
    This Function is to convert Column Values into DateTime
 
@@ -94,7 +94,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(7).png)
 
-### ConvertToInt :-
+### ConvertToInt
 
    This Function is to convert Column Values into Int
 
@@ -102,7 +102,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(8).png)
 
-### ExtractDate :-
+### ExtractDate
 
    This Function is to Extract a Specific kind of date from another Column like: Year, Month, Day, Hour
 
@@ -140,7 +140,7 @@ $ dataparse
 
 ## MathMatics
 
-### Statics :-
+### Statics
 
    This Function is to get the mean, mode, median, standard deviation, variance, min, max
 
@@ -154,7 +154,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(12).png)
 
-### Operations :-
+### Operations
 
    This Function is to Sum, Subtract, Divide, Multiply Two Columns and put the value in a new Column
 
@@ -180,7 +180,7 @@ $ dataparse
    |  1 | AAA Batteries (4-pack) |                  3 |         2.99 | 2019-09-17 20:56:00 | 840 Highland St, Los Angeles, CA 90001 |    8.97 |
    |  2 | USB-C Charging Cable   |                  1 |        11.95 | 2019-09-30 00:18:00 | 250 Meadow St, San Francisco, CA 94016 |   11.95 |
 
-### Linear :-
+### Linear
 
    This Function is to Do Linear Equation
 
@@ -206,7 +206,7 @@ $ dataparse
 
 # Display
 
-### Histogram :-
+### Histogram
 
    * Steps :
 
@@ -218,7 +218,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(23).png)
 
-### Bar :-
+### Bar
 
    * Steps :
 
@@ -230,7 +230,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(26).png)
 
-### Plot :-
+### Plot
 
    * CSV :
 
@@ -280,7 +280,7 @@ $ dataparse
 
            ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(38).png)
 
-### Scatter :-
+### Scatter
 
    * Steps:
 
