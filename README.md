@@ -26,7 +26,7 @@ It depends on what version you have on your pc.
     $ cd
     $ nano .bashrc
 
-* add this line ***alias dataparse='python3 Foo/bar/DataParse/main.py'*** 
+* add this line ``alias dataparse='python3 Foo/bar/DataParse/main.py'`` 
 
 * close the terminal and open it again
 
@@ -45,10 +45,6 @@ $ dataparse
    * Here we have a directory that i want to concat to ``all.csv``
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(1).png)
-
-   ```
-   $ dataparse
-   ```
 
    * Steps :
 
