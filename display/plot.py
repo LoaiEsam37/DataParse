@@ -144,7 +144,7 @@ def USER_INPUT():
             print(
                 "\n"+
                 f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} Scatter  -->  1\n"+
-                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} None     -->  3\n"+
+                f"{Fore.LIGHTGREEN_EX}+{Fore.WHITE} None     -->  2\n"+
                 f"\n"+
                 f"-----------------------------"+
                 f"\n"
