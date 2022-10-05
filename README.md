@@ -8,7 +8,7 @@
 
 [CSV Model for trainig](https://github.com/LoaiEsam37/csv)
 
-[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
+[Installation](#Installation) | [Usage](#Usage) | [Functions](#Functions) | [Concat](#Concat_:-) | [DropNa](#DropNa) | [DropColumn](#DropColumn) | [DropRow](#DropRow) | [DropDuplicates](#DropDuplicates) | [ConvertToDateTime](#ConvertToDateTime) | [ConvertToInt](#ConvertToInt) | [ExtractDate](#ExtractDate) | [MathMatics](#MathMatics) | [Statics](#Statics) | [Operations](#Operations) | [Linear](#Linear) | [Polynomial](#Polynomial) | [Display](#Display) | [Histogram](#Histogram) | [Bar](#Bar) | [Plot](#Plot) | [Scatter](#Scatter)
 
 # Installation
     $ git clone https://github.com/LoaiEsam37/DataParse
@@ -38,7 +38,7 @@ $ dataparse
 
 ## Functions
 
-### Concat :-
+### Concat_:-
 
    This Function is for concat a directory that full of csv files into a single file
 
@@ -54,7 +54,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
-### DropNa :-
+### DropNa_:-
 
    This Function is for drop all NaN in csv file
 
@@ -62,7 +62,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
 
-### DropColumn :-
+### DropColumn_:-
 
    This Function is for drop the column from csv file that you want
 
@@ -70,7 +70,7 @@ $ dataparse
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
 
-### DropRow :-
+### DropRow_:-
 
    This Function is for drop the row from csv file that you want
 
