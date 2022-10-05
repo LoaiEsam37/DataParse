@@ -231,19 +231,27 @@ $ dataparse
 
 ## Plot
 
-* CSV
+* CSV :
+
+* Steps :
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
 
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(28).png)
 
+* Result :
+
 ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(29).png)
 
-* JSON
+* JSON :
 
 * [Linear](#Linear) :
 
+
+
 * [Polynomial](#Polynomial) :
+
+
 
 
 
