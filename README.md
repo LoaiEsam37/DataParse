@@ -42,6 +42,7 @@ $ dataparse
 <hr>
    This Function is for concat a directory that full of csv files into a single file
 
+
    * Here we have a directory that i want to concat to ``all.csv``
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(1).png)
@@ -54,6 +55,7 @@ $ dataparse
 <hr>
    This Function is for drop all NaN in csv file
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
@@ -61,6 +63,7 @@ $ dataparse
 ### DropColumn
 <hr>
    This Function is for drop the column from csv file that you want
+
 
    * steps :
 
@@ -70,6 +73,7 @@ $ dataparse
 <hr>
    This Function is for drop the row from csv file that you want
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
@@ -77,6 +81,7 @@ $ dataparse
 ### DropDuplicates
 <hr>
    This Function is for drop duplicates from the Column that you want
+
 
    * Steps :
 
@@ -86,6 +91,7 @@ $ dataparse
 <hr>
    This Function is to convert Column Values into DateTime
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(7).png)
@@ -94,6 +100,7 @@ $ dataparse
 <hr>
    This Function is to convert Column Values into Int
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(8).png)
@@ -101,6 +108,7 @@ $ dataparse
 ### ExtractDate
 <hr>
    This Function is to Extract a Specific kind of date from another Column like: Year, Month, Day, Hour
+
 
    * In This Example We have ``Order Date`` Column and We Want to Extract The Day from it and Put The Values to A new Column named ``Day``:
 
@@ -140,6 +148,7 @@ $ dataparse
 <hr>
    This Function is to get the mean, mode, median, standard deviation, variance, min, max
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(10).png)
@@ -153,6 +162,7 @@ $ dataparse
 ### Operations
 <hr>
    This Function is to Sum, Subtract, Divide, Multiply Two Columns and put the value in a new Column
+
 
    * In This Example we need to Multiply ``Quantity Ordered`` with ``Price Each`` and put the values in a new Column named ``Sales`` 
 
@@ -180,6 +190,7 @@ $ dataparse
 <hr>
    This Function is to Do Linear Equation
 
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(17).png)
@@ -191,6 +202,7 @@ $ dataparse
 ### Polynomial
 <hr>
    This Function is to do Polynomial Equation
+
 
    * Steps :
 
@@ -204,6 +216,7 @@ $ dataparse
 
 ### Histogram
 <hr>
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(21).png)
@@ -216,6 +229,7 @@ $ dataparse
 
 ### Bar
 <hr>
+
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(24).png)
@@ -279,6 +293,7 @@ $ dataparse
 
 ### Scatter
 <hr>
+
    * Steps:
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(39).png)
