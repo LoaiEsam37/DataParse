@@ -251,11 +251,11 @@ $ dataparse
 
         ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(31).png)
 
-        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(32).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(33).png)
 
         * Result :
 
-        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(33).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(32).png)
 
     * [Polynomial](#Polynomial) :
 
@@ -263,11 +263,11 @@ $ dataparse
 
         ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(34).png)
 
-        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(35).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
 
         * Result :
 
-        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(35).png)
 
 ## Scatter
 
