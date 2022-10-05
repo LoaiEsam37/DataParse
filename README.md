@@ -268,7 +268,16 @@ $ dataparse
         * Result :
 
         ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(35).png)
+    * Other :
+        * Steps : 
+        
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
+        
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(37).png)
+        
+        * Result :
 
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(38).png)
 ## Scatter
 
 ## Connect Me
