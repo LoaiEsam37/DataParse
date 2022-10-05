@@ -55,7 +55,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(2).png)
 
 ### DropNa
-
+<hr>
    This Function is for drop all NaN in csv file
 
    * Steps :
@@ -63,7 +63,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(3).png)
 
 ### DropColumn
-
+<hr>
    This Function is for drop the column from csv file that you want
 
    * steps :
@@ -71,7 +71,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(4).png)
 
 ### DropRow
-
+<hr>
    This Function is for drop the row from csv file that you want
 
    * Steps :
@@ -79,7 +79,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(5).png)
 
 ### DropDuplicates
-
+<hr>
    This Function is for drop duplicates from the Column that you want
 
    * Steps :
@@ -87,7 +87,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(6).png)
 
 ### ConvertToDateTime
-
+<hr>
    This Function is to convert Column Values into DateTime
 
    * Steps :
@@ -95,7 +95,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(7).png)
 
 ### ConvertToInt
-
+<hr>
    This Function is to convert Column Values into Int
 
    * Steps :
@@ -103,7 +103,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(8).png)
 
 ### ExtractDate
-
+<hr>
    This Function is to Extract a Specific kind of date from another Column like: Year, Month, Day, Hour
 
    * In This Example We have ``Order Date`` Column and We Want to Extract The Day from it and Put The Values to A new Column named ``Day``:
@@ -141,7 +141,7 @@ $ dataparse
 ## MathMatics
 
 ### Statics
-
+<hr>
    This Function is to get the mean, mode, median, standard deviation, variance, min, max
 
    * Steps :
@@ -155,7 +155,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(12).png)
 
 ### Operations
-
+<hr>
    This Function is to Sum, Subtract, Divide, Multiply Two Columns and put the value in a new Column
 
    * In This Example we need to Multiply ``Quantity Ordered`` with ``Price Each`` and put the values in a new Column named ``Sales`` 
@@ -181,7 +181,7 @@ $ dataparse
    |  2 | USB-C Charging Cable   |                  1 |        11.95 | 2019-09-30 00:18:00 | 250 Meadow St, San Francisco, CA 94016 |   11.95 |
 
 ### Linear
-
+<hr>
    This Function is to Do Linear Equation
 
    * Steps :
@@ -193,7 +193,7 @@ $ dataparse
    * [Next step](#Plot) to Show the Data on Matplotlib
 
 ### Polynomial
-
+<hr>
    This Function is to do Polynomial Equation
 
    * Steps :
@@ -207,7 +207,7 @@ $ dataparse
 # Display
 
 ### Histogram
-
+<hr>
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(21).png)
@@ -219,7 +219,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(23).png)
 
 ### Bar
-
+<hr>
    * Steps :
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(24).png)
@@ -231,7 +231,7 @@ $ dataparse
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(26).png)
 
 ### Plot
-
+<hr>
    * CSV :
 
        * Steps :
@@ -281,7 +281,7 @@ $ dataparse
            ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(38).png)
 
 ### Scatter
-
+<hr>
    * Steps:
 
    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(39).png)
