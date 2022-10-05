@@ -231,6 +231,22 @@ $ dataparse
 
 ## Plot
 
+* CSV
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(28).png)
+
+![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(29).png)
+
+* JSON
+
+* [Linear](#Linear) :
+
+* [Polynomial](#Polynomial) :
+
+
+
 ## Scatter
 
 ## Connect Me
