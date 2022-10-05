@@ -233,41 +233,41 @@ $ dataparse
 
 * CSV :
 
-* Steps :
+    * Steps :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
+    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(28).png)
+    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(28).png)
 
-* Result :
+    * Result :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(29).png)
+    ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(29).png)
 
 * JSON :
 
-* [Linear](#Linear) :
+    * [Linear](#Linear) :
 
-* Steps :
+        * Steps :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(31).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(31).png)
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(32).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(32).png)
 
-* Result :
+        * Result :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(33).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(33).png)
 
-* [Polynomial](#Polynomial) :
+    * [Polynomial](#Polynomial) :
 
-* Steps :
+        * Steps :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(34).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(34).png)
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(35).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(35).png)
 
-* Result :
+        * Result :
 
-![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
+        ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
 
 ## Scatter
 
