@@ -261,9 +261,9 @@ $ dataparse
 
            * Steps :
 
-           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(31).png)
+           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
 
-           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(33).png)
+           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(31).png)
 
            * Result :
 
@@ -273,9 +273,9 @@ $ dataparse
 
            * Steps :
 
-           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(34).png)
+           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(27).png)
 
-           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(36).png)
+           ![](https://github.com/LoaiEsam37/Images/blob/main/dataparse(34).png)
 
            * Result :
 
